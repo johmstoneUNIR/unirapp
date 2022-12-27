@@ -1,13 +1,13 @@
 
-import './App.css';
+import { MainSidebar } from './components/common/MainSidebar';
 import { MainTopBar } from './components/common/MainTopBar';
 
 function App() {
   return (
-    <div className="App">
-      <h1>Hola mundo</h1>
-      <MainTopBar></MainTopBar>
-    </div>
+    <main className='d-flex flex-nowrap'>
+      <MainSidebar></MainSidebar>
+      <div className="b-example-divider b-example-vr"></div>
+    </main>
   );
 }
 
