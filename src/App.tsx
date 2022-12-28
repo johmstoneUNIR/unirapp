@@ -1,16 +1,24 @@
 
+import { useState } from 'react';
 import { Breadcrumb } from './components/common/Breadcrumb';
 import { MainSidebar } from './components/common/MainSidebar';
 import { Navbar } from './components/common/Navbar';
 
+
 function App() {
+  const [isActive, setActive] = useState(true);
+
+  const toggleClass = () => {
+    setActive(!isActive);
+  };
+
   return (
     <>
-    <div id="wrapper" className='d-flex'>
+    <div id="wrapper" className={isActive ? 'd-flex toggled': 'd-flex'} >
       <MainSidebar></MainSidebar>
       
       <div id="page-content-wrapper">
-        <Navbar></Navbar>
+        <Navbar toggleClass={toggleClass}></Navbar>
 
         <div className="container-fluid">
           <h2 className='mt-2'>Módulo de Inventario</h2>
