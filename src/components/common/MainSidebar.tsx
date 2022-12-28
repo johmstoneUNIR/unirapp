@@ -1,7 +1,7 @@
 
-import logo from '../../logo.svg';
-import './MainSidebar.css';
-import '../../App.css';
+import logo from '../../svg/logo.svg';
+import '../../styles/MainSidebar.css';
+import '../../styles/App.css';
 
 export const MainSidebar = () => {
   return (
@@ -34,6 +34,12 @@ export const MainSidebar = () => {
               <a href="#" className="nav-link text-white">
                 
                 Products
+              </a>
+            </li>
+            <li>
+              <a href="#" className="nav-link text-white">
+               
+                Customers
               </a>
             </li>
             <li>

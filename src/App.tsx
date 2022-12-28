@@ -1,4 +1,5 @@
 
+import { Breadcrumb } from './components/common/Breadcrumb';
 import { MainSidebar } from './components/common/MainSidebar';
 import { Navbar } from './components/common/Navbar';
 
@@ -11,8 +12,9 @@ function App() {
       <div id="page-content-wrapper">
         <Navbar></Navbar>
 
-        <div className="container">
-        <h2 className='mt-2'>Módulo de Inventario</h2>
+        <div className="container-fluid">
+          <h2 className='mt-2'>Módulo de Inventario</h2>
+          <Breadcrumb></Breadcrumb>
           <div className="row">
             <div className="col">
               <div className="shadow-sm p-3 mb-5 bg-white rounded">Main Content</div>
