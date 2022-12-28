@@ -5,7 +5,7 @@ import { MainTopBar } from './components/common/MainTopBar';
 function App() {
   return (
     <>
-    <div id="wrapper">
+    <div id="wrapper" className='d-flex'>
       <MainSidebar></MainSidebar>
       
       <div id="page-content-wrapper">
