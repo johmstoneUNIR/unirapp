@@ -1,6 +1,6 @@
 
 import { MainSidebar } from './components/common/MainSidebar';
-import { MainTopBar } from './components/common/MainTopBar';
+import { Navbar } from './components/common/Navbar';
 
 function App() {
   return (
@@ -9,11 +9,14 @@ function App() {
       <MainSidebar></MainSidebar>
       
       <div id="page-content-wrapper">
-        <MainTopBar></MainTopBar>
+        <Navbar></Navbar>
 
-        <div className="container-fluid">
-        <h2>Módulo de Inventario</h2>
+        <div className="container">
+        <h2 className='mt-2'>Módulo de Inventario</h2>
           <div className="row">
+            <div className="col">
+              <div className="shadow-sm p-3 mb-5 bg-white rounded">Main Content</div>
+            </div>
             
           </div>
         </div>
