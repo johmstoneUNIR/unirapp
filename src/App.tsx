@@ -4,10 +4,24 @@ import { MainTopBar } from './components/common/MainTopBar';
 
 function App() {
   return (
-    <main className='d-flex flex-nowrap'>
+    <>
+    <div id="wrapper">
       <MainSidebar></MainSidebar>
-      <div className="b-example-divider b-example-vr"></div>
-    </main>
+      
+      <div id="page-content-wrapper">
+        <MainTopBar></MainTopBar>
+
+        <div className="container-fluid">
+        <h2>Módulo de Inventario</h2>
+          <div className="row">
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+    </>
   );
 }
 

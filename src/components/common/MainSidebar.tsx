@@ -15,10 +15,8 @@ export const MainSidebar = () => {
         <hr></hr>
           <ul className="nav nav-pills flex-column mb-auto">
             <li className="nav-item">
-              <a href="#" className="nav-link active" aria-current="page">
-                
-                Home
-              </a>
+              <a href="#" className="nav-link active">
+                <i className="fa-solid fa-home"></i> Inicio</a>
             </li>
             <li>
               <a href="#" className="nav-link text-white">
