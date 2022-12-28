@@ -3,17 +3,17 @@ import { useToggle } from '../../hooks/useToogle';
 import '../../styles/Navbar.css';
 
 type NavbarPropTypes = {
-  toggleClass: () => void
+  toggleMenu: () => void
 }
 
-export const Navbar = ({toggleClass}: NavbarPropTypes) => {
+export const Navbar = ({toggleMenu}: NavbarPropTypes) => {
  
   return (
     <>
     <nav className="navbar navbar-expand-lg bg-light">
         <div className="container-fluid">
             <a className="navbar-brand">
-              <button type="button" className="btn btn-sm" onClick={toggleClass}><i className="fa fa-bars" aria-hidden="true"></i></button>
+              <button type="button" className="btn btn-sm" onClick={toggleMenu}><i className="fa fa-bars" aria-hidden="true"></i></button>
             </a>
             <button  className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>

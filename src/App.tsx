@@ -3,14 +3,11 @@ import { useState } from 'react';
 import { Breadcrumb } from './components/common/Breadcrumb';
 import { MainSidebar } from './components/common/MainSidebar';
 import { Navbar } from './components/common/Navbar';
+import { useToggle } from './hooks/useToogle';
 
 
 function App() {
-  const [isActive, setActive] = useState(true);
-
-  const toggleClass = () => {
-    setActive(!isActive);
-  };
+  const {isActive, toggleMenu} = useToggle(false);
 
   return (
     <>
@@ -18,7 +15,7 @@ function App() {
       <MainSidebar></MainSidebar>
       
       <div id="page-content-wrapper">
-        <Navbar toggleClass={toggleClass}></Navbar>
+        <Navbar toggleMenu={toggleMenu}></Navbar>
 
         <div className="container-fluid">
           <h2 className='mt-2'>Módulo de Inventario</h2>
