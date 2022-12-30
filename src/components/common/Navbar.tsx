@@ -1,5 +1,6 @@
 
 import '../../styles/Navbar.css';
+import { Clock } from '../Clock';
 
 type NavbarPropTypes = {
   toggleMenu: () => void
@@ -21,7 +22,7 @@ export const Navbar = ({toggleMenu}: NavbarPropTypes) => {
             <ul className="navbar-nav">
                 <li className="nav-item">
                 <a className="nav-link text-end" href="#/">
-                  <i className="fa-solid fa-clock"></i> 2022-12-28 01:30
+                  <i className="fa-solid fa-clock"></i> <Clock></Clock>
                 </a>
                 </li>
                 <li className="nav-item">

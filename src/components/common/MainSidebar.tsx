@@ -16,36 +16,22 @@ export const MainSidebar = () => {
           <ul className="nav nav-pills flex-column mb-auto">
             <li className="nav-item">
               <a href="#/" className="nav-link active">
-                <i className="fa-solid fa-home"></i> Inicio</a>
-            </li>
-            <li>
-              <a href="#/" className="nav-link text-white">
-                
-                Dashboard
+                <i className="fa-solid fa-home"></i> Inicio
               </a>
             </li>
             <li>
               <a href="#/" className="nav-link text-white">
-               
-                Orders
+                <i className="fa-solid fa-bag-shopping"></i> Pedidos
               </a>
             </li>
             <li>
               <a href="#/" className="nav-link text-white">
-                
-                Products
+                <i className="fa-solid fa-cubes"></i> Inventario
               </a>
             </li>
             <li>
               <a href="#/" className="nav-link text-white">
-               
-                Customers
-              </a>
-            </li>
-            <li>
-              <a href="#/" className="nav-link text-white">
-               
-                Customers
+                <i className="fa-solid fa-users"></i> Clientes
               </a>
             </li>
           </ul>
