@@ -4,6 +4,8 @@ import { MainSidebar } from './components/common/MainSidebar';
 import { Navbar } from './components/common/Navbar';
 import { useToggle } from './hooks/useToogle';
 
+import productos from './data/productos.json';
+import { CardProducto } from './components/CardProducto';
 
 function App() {
   const {isActive, toggleMenu} = useToggle(false);
@@ -21,9 +23,20 @@ function App() {
           <Breadcrumb></Breadcrumb>
           <div className="row">
             <div className="col">
-              <div className="shadow-sm p-3 mb-5 bg-white rounded">Main Content</div>
+              <div className="shadow-sm p-3 bg-white rounded">
+                <div className="row">
+                  <div className="card-group">
+                    { 
+                      productos.map( producto => {
+                        return (<div className="col-md-3 col-sm-6 col-xs-1">
+                                    <CardProducto producto={producto}></CardProducto>
+                                </div>)
+                      })
+                    }
+                  </div>
+                </div>
+              </div>
             </div>
-            
           </div>
         </div>
       </div>

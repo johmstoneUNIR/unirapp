@@ -1,6 +1,6 @@
 
 import moment from "moment"
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 export const Clock = () => {
     const hoy = moment().format('DD/MM/YYYY HH:mm:ss');
