@@ -2,7 +2,7 @@
 import logo from '../../svg/logo.svg';
 import '../../styles/MainSidebar.css';
 import '../../styles/App.css';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 export const MainSidebar = () => {
   return (
@@ -16,24 +16,35 @@ export const MainSidebar = () => {
         <hr></hr>
           <ul className="nav nav-pills flex-column mb-auto">
             <li className="nav-item">
-              <Link to="/" className="nav-link active">
+              <NavLink 
+                to="/" 
+                className={ ({isActive}) => `nav-link ${ isActive ? 'active' : 'text-white'}`}>
                 <i className="fa-solid fa-home"></i> Inicio
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link to="/productos" className="nav-link text-white">
-                <i className="fa-solid fa-bag-shopping"></i> Productos
-              </Link>
+              <NavLink to="/productos" 
+                className={ ({isActive}) => `nav-link ${ isActive ? 'active' : 'text-white'}`}>
+                <i className="fa-solid fa-cubes"></i> Productos
+              </NavLink>
             </li>
             <li>
-              <Link to="/pedidos" className="nav-link text-white">
+              <NavLink to="/pedidos"
+                className={ ({isActive}) => `nav-link ${ isActive ? 'active' : 'text-white'}`}>
                 <i className="fa-solid fa-bag-shopping"></i> Pedidos
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link to="/clientes" className="nav-link text-white">
+              <NavLink to="/clientes"
+                className={ ({isActive}) => `nav-link ${ isActive ? 'active' : 'text-white'}`}>
                 <i className="fa-solid fa-users"></i> Clientes
-              </Link>
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/noexiste"
+                className={ ({isActive}) => `nav-link ${ isActive ? 'active' : 'text-white'}`}>
+                <i className="fa-solid fa-file"></i> 404 Page
+              </NavLink>
             </li>
           </ul>
         
