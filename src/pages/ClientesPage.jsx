@@ -1,9 +1,13 @@
-import React from 'react'
-import productos from './../data/productos.json';
+
 import { Breadcrumb } from './../components/common/Breadcrumb';
 import { Search } from './../components/common/Search';
+import { useFetch } from './../hooks/useFetch';
 
 export const ClientesPage = () => {
+  
+  const { resultados, isLoading } = useFetch('https://jsonplaceholder.typicode.com/users');
+  console.log({ resultados, isLoading });
+
   return (
     <>
       <div className="container-fluid">
@@ -14,15 +18,31 @@ export const ClientesPage = () => {
               <div className="shadow-sm p-3 bg-white rounded">
                 <div className="row">
                   <Search></Search>
-                  <div className="card-group">
-                    { 
-                      productos.map( producto => {
-                        return (<div className="col-md-3 col-sm-6 col-xs-1" key={producto.id}>
-                                   
-                                </div>)
-                      })
-                    }
-                  </div>
+
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Correo</th>
+                        <th scope="col">Teléfono</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      { 
+                        resultados.map( row => {
+                          return (<tr key={row.id}>
+                                    <td>{row.id}</td>
+                                    <td>{row.name}</td>
+                                    <td>{row.email}</td>
+                                    <td>{row.phone}</td>
+                                    
+                                  </tr>)
+                        })
+                      }
+                    </tbody>
+                  </table>
+                 
                 </div>
               </div>
             </div>
