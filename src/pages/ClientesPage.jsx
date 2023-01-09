@@ -1,13 +1,9 @@
-
 import { Breadcrumb } from './../components/common/Breadcrumb';
 import { Search } from './../components/common/Search';
 import { useFetch } from './../hooks/useFetch';
 
 export const ClientesPage = () => {
-  
   const { resultados, isLoading } = useFetch('https://jsonplaceholder.typicode.com/users');
-  console.log({ resultados, isLoading });
-
   return (
     <>
       <div className="container-fluid">
@@ -18,7 +14,6 @@ export const ClientesPage = () => {
               <div className="shadow-sm p-3 bg-white rounded">
                 <div className="row">
                   <Search></Search>
-
                   <table class="table">
                     <thead>
                       <tr>
@@ -42,7 +37,6 @@ export const ClientesPage = () => {
                       }
                     </tbody>
                   </table>
-                 
                 </div>
               </div>
             </div>

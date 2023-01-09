@@ -12,15 +12,12 @@ import { useToggle } from './../hooks/useToogle';
 
 export const AppRouter = () => {
   const {isActive, toggleMenu} = useToggle(false);
-
   return (
     <BrowserRouter>
       <div id="wrapper" className={isActive ? 'd-flex toggled': 'd-flex'} >
           <MainSidebar></MainSidebar>
-          
           <div id="page-content-wrapper">
             <Navbar toggleMenu={toggleMenu}></Navbar>
-
             <Routes>
                 <Route path="/" element={<WelcomePage/>}></Route>
                 <Route path="/productos" element={<ProductosPage/>} ></Route>
@@ -29,11 +26,8 @@ export const AppRouter = () => {
                 <Route path="/configuraciones" element={<ConfigPage/>} ></Route>
                 <Route path="/*" element={<NotFoundPage/>}></Route>
             </Routes>
-            
         </div>
       </div>
-     
-       
     </BrowserRouter>
   )
 }

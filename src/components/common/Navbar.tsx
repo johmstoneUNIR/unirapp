@@ -7,7 +7,7 @@ type NavbarPropTypes = {
 }
 
 export const Navbar = ({toggleMenu}: NavbarPropTypes) => {
- 
+
   return (
     <>
     <nav className="navbar navbar-expand-lg bg-light">
@@ -34,17 +34,13 @@ export const Navbar = ({toggleMenu}: NavbarPropTypes) => {
                   <div className="dropdown">
                     <a className="nav-link text-end dropdown-toggle p-1" data-bs-toggle="dropdown" href="#/">
                       <img src="https://github.com/mdo.png" alt="" width="32" height="32" className="rounded-circle"></img>
-                      
                     </a>
                     <ul className="dropdown-menu dropdown-menu-end">
                       <li><a className="dropdown-item" href="#/">Configuraciones</a></li>
                       <li><a className="dropdown-item" href="#/">Cerrar Sesion</a></li>
-                      
                     </ul>
                   </div>
                 </li>
-                
-
             </ul>
             </div>
         </div>

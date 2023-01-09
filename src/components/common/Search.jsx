@@ -17,6 +17,5 @@ export const Search = () => {
         <input onChange={handleChange} type="search" className="form-control" placeholder="Buscar..." value={busqueda}/>
         <button onClick={handleSearch} className="btn btn-primary" type="button">Buscar</button>
     </div>
-
   )
 }
